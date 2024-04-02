@@ -56,7 +56,7 @@ Use the following list of questions to quickly jump to what you're looking for.
   - [...about failed connection](#)
 - [I turn my pots but nothing happens](#)
 - [I ran deej.exe and my volume keeps jumping around](#)
-- [My pots only seem to go up to around half volume](#)
+- [My pots only seem to go up to around half volume](#my-pots-only-seem-to-go-up-to-around-half-volume) ✔
 - [All of my pots are inverted!](#all-of-my-pots-are-inverted) ✔
 - [One of my pots is inverted](#one-of-my-pots-is-inverted) ✔
 
@@ -247,6 +247,20 @@ At that point, you should be able to go to _Tools_ → _Serial Monitor_ in the A
 
 
 ## Running deej for the first time
+
+### My pots only seem to go up to around half volume
+
+Arduino [analogRead()](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/) returns value in 0-1023 range and deej apps expect values in this range.
+
+Some development boards can have different implementation (i.e. ESP32 analogRead() returns value in range 0-4095). This causes maximum volume to be reached while potentiometer still did not reach maximum.
+
+***Solution:***
+Use arduino function [map()](https://www.arduino.cc/reference/en/language/functions/math/map/) to map value returned by analogRead() to 0-1023 range..
+
+
+<sub>_Tags: #pots, #sliders, #volume, #limit</sub>
+
+[**[↑]**](#deej-faq)
 
 ### All of my pots are inverted
 
