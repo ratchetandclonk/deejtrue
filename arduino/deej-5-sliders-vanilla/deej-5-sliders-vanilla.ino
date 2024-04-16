@@ -1,6 +1,10 @@
 const int NUM_SLIDERS = 5;
 const int analogInputs[NUM_SLIDERS] = {A0, A1, A2, A3, A4};
 
+// The max value received by the deej software should only be 1023, but some controllers like some esp32 are sending higher values like 4095. 
+// If that is the case, set the max value sent by the board here so it will get lowered.
+int  REAL_MAX_VALUE = 1023;
+
 int analogSliderValues[NUM_SLIDERS];
 
 void setup() { 
@@ -20,7 +24,8 @@ void loop() {
 
 void updateSliderValues() {
   for (int i = 0; i < NUM_SLIDERS; i++) {
-     analogSliderValues[i] = analogRead(analogInputs[i]);
+    int rawValue = analogRead(analogInputs[i]);
+    analogSliderValues[i] = (rawValue * 1023) / REAL_MAX_VALUE;
   }
 }
 
