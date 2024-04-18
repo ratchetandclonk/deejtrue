@@ -111,19 +111,7 @@ noise_reduction: default
     - control more than one app with a single slider
     - choose whichever process in the group that's currently running (i.e. to have one slider control any game you're playing)
 
-## Build your own!
 
-Building deej is very simple. You only need a few relatively cheap parts - it's an excellent starter project (and my first Arduino project, personally). Remember that if you need any help or have a question that's not answered here, you can always [join the deej Discord server](https://discord.gg/nf88NJu).
-
-Build deej for yourself, or as an awesome gift for your gaming buddies!
-
-### FAQ
-
-I've started a highly focused effort of writing a proper FAQ page for deej, covering many basic and advanced topics.
-
-It is still _very much a work-in-progress_, but I'm happy to [share it in its current state](./docs/faq/faq.md) in hopes that it at least covers some questions you might have.
-
-FAQ feedback in our [community Discord](https://discord.gg/nf88NJu) is strongly encouraged :)
 
 ### Build video
 
@@ -146,7 +134,6 @@ With many different 3D-printed designs being added to our [community showcase](.
 
 **[Visit our community-created design collection on Thingiverse!](https://thingiverse.com/omriharel/collections/deej)**
 
-> You can also [submit your own](https://discord.gg/nf88NJu) design to be added to the collection. Regardless, if you do upload your design to Thingiverse, _please add a `deej` tag to it so that others can find it more easily_.
 
 
 ### Build procedure
@@ -169,8 +156,7 @@ With many different 3D-printed designs being added to our [community showcase](.
 
 #### Linux
 
-- Install `libgtk-3-dev`, `libappindicator3-dev` and `libwebkit2gtk-4.0-dev` for system tray support. Pre-built Linux binaries aren't currently released, so you'll need to [build from source](#building-from-source). If there's demand for pre-built binaries, please [let me know](https://discord.gg/nf88NJu)!
-
+- Install `libgtk-3-dev`, `libappindicator3-dev` and `libwebkit2gtk-4.0-dev` for system tray support. Pre-built Linux binaries aren't currently released, so you'll need to [build from source](#building-from-source). If there's demand for pre-built binaries, please 
 ### Download and installation
 
 - Head over to the [releases page](https://github.com/omriharel/deej/releases) and download the [latest version](https://github.com/omriharel/deej/releases/latest)'s executable and configuration file (`deej.exe` and `config.yaml`)
@@ -183,15 +169,7 @@ If you'd rather not download a compiled executable, or want to extend deej or mo
 
 Like other Go packages, you can also use the `go get` tool: `go get -u github.com/omriharel/deej`. Please note that the package code now resides in the `pkg/deej` directory, and needs to be imported from there if used inside another project.
 
-If you need any help with this, please [join our Discord server](https://discord.gg/nf88NJu).
 
-## Community
-
-[![Discord](https://img.shields.io/discord/702940502038937667?logo=discord)](https://discord.gg/nf88NJu)
-
-deej is a relatively new project, but a vibrant and awesome community is rapidly growing around it. Come hang out with us in the [deej Discord server](https://discord.gg/nf88NJu), or check out a whole bunch of cool and creative builds made by our members in the [community showcase](./community.md).
-
-The server is also a great place to ask questions, suggest features or report bugs (but of course, feel free to use GitHub if you prefer).
 
 ### Donations
 
